@@ -1,3 +1,8 @@
-.landing_artwork {
-	height: 100%
+.landing_container {
+	width: 100%
+}
+
+.landing_container img {
+	max-height: 100%
+	max-width: 100%
 }
