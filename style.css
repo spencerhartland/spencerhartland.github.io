@@ -14,7 +14,7 @@
 }
 
 /* shows full name text if on iPad/Mac */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
 	/* hide small logo */
 	.header img {
 		display: none;
@@ -28,7 +28,7 @@
 }
 
 /* shows small logo if on iPhone */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
 	/* hide full name text */
 	.header h1 {
 		display: none;
