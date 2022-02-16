@@ -7,23 +7,50 @@
   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Work+Sans:wght@200..900'>
   <!-- viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Main logic -->
-  <script src="script.js"></script>
+  <!-- jQuery -->
+  <script src="jquery-3.6.0.min.js"></script>
+  <!-- Navigation icon animation logic -->
+  <script src="nav-icon.js"></script>
 </head>
+
 <body>
-  <!-- Header -->
+  <!-- Navigation Bar -->
   <div class="navbar">
+    <!-- Nav icon for small screens -->
     <div id="nav-icon">
       <span></span>
       <span></span>
       <span></span>
       <span></span>
     </div>
-    <!-- Small logo for iPhone -->
+    <!-- Small logo for small screens -->
     <img src="./Assets/small_logo.svg">
-    <!-- Full name for iPad/Mac -->
+    <!-- Full name for large screens -->
     <h1>SPENCER HARTLAND</h1>
   </div>
+
+  <!-- Navigation menu for small screens -->
+  <ul class="dropdown">
+    <ul class="dropdown_menu" id="dropdown">
+
+      <!-- Page 1: About -->
+      <li class="dropdown_item-1">
+        <div class="menu-item">
+          About
+          <div class="menu-divider"></div>
+        </div>
+      </li>
+
+      <!-- Page 2: Projects -->
+      <li class="dropdown_item-2">
+        <div class="menu-item">
+          Projects
+          <div class="menu-divider"></div>
+        </div>
+      </li>
+
+    </ul>
+  </ul>
 
   <!-- Landing Artwork -->
   <div class="landing_container">
