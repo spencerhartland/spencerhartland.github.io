@@ -5,6 +5,11 @@
 	outline: 0;
 }
 
+a {
+	color: black;
+	text-decoration: none;
+}
+
 .navbar {
 	/* Header (container) attributes */
 	width: 100%;
@@ -15,7 +20,15 @@
 }
 
 .navbar * {
+	vertical-align: middle;
 	display: inline-block;
+}
+
+/* Hide the navigation items on small screens (nav icon to open menu) */
+@media only screen and (max-width: 600px) {
+	.nav-item {
+		display: none;
+	}
 }
 
 /* Hide the navigation icon on large screens (nav bar will host menu items) */
@@ -126,6 +139,16 @@
 	100% {
 		transform: scaleY(1)
 		}
+}
+
+.nav-item {
+	font-family: 'Source Code Pro';
+	font-weight: 650;
+	font-size: 16px;
+}
+
+.spacer {
+	width: 4%;
 }
 
 .menu-item {
