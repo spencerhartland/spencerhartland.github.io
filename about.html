@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html>
+<style>
+  body {
+    background-color: #1A1A1A;
+  }
+</style>
+
   <head>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
     <!-- Work Sans -->
     <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Work+Sans:wght@200..900'>
+    <!-- Rajdhani (Cyberpunk 2077 UI Font) -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700'>
     <!-- Source Code Pro -->
     <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200..900'>
     <!-- viewport -->
@@ -14,8 +24,32 @@
   </head>
 
   <body>
+    <!-- Navigation -->
     <nav-bar></nav-bar>
-    
-    About
+
+    <div class="terminal-container">
+      <!-- Page title -->
+      <div class="title-bar">ABOUT</div>
+
+      <!-- Terminal output text -->
+      <div class="typing-text">
+        <h1 id="line_1">: PROC_ID=0000111976 UNPACKING RESOURCES... | "PERSONAL_SUMMARY"</h1>
+        <h1 id="line_2">: PROC_ID=0000111984 READING DATABASE... | "EDUCATION"</h1>
+        <h1 id="line_3">: PROC_ID=0000222001 COMPILING DPENDENCIES... | "SKILLS"</h1>
+        <h1 id="line_4">: PROC_ID=0000222007 EXECUTING... | "PROFESSIONAL_EXPERIENCE"</h1>
+        <h1 id="line_5">: PROC_ID=0000222010 VALIDATING RESULTS... | "SELF-DRIVEN_EXPERIENCE"</h1>
+      </div>
+
+      <!-- Popup -->
+      <div class="popup">
+        <div id="popup-top">
+          <div id="progress-bar"></div>
+        </div>
+        <div id="popup-bottom">
+          <h1>INITIALIZATION COMPLETE ["ABOUT"]</h1>
+          <p>v1.0 copyright spencerhartland 0110100001101001001000000111010001101000011001010111001001100101</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
