@@ -1,22 +1,69 @@
-/* index.html */
+/* media queries for responsive design */
+/* Larger Devices */
 @media only screen and (min-width: 600px) {
 	.landing_container img {
 		max-height: 95vh;
 	}
+	#popup-bottom h1 { font-size: 18px; }
+	.section { display: inline-block; }
+	.text-container { max-width: 67%; }
+	.windowed-text { font-size: 80%; }
+	.profile-container { max-width: 30%; }
+	.profile-container #text-container {
+		margin-top: 8px;
+		grid-column: 1;
+		grid-row: 2;
+	}
 }
 
-/* Give the artwork a little more space on smaller devices */
+/* Samller devices */
 @media only screen and (max-width: 600px) {
 	.landing_container img {
 		max-height: 90vh;
 	}
+	#popup-bottom h1 { font-size: 14px; }
+	.section { display: inline-grid; }
+	.text-container {
+		grid-column: 1;
+		grid-row: 2;
+		max-width: 98%;
+	}
+	.windowed-text { font-size: 60%; }
+	.profile-container {
+		max-width: 60%;
+		margin-bottom: 8px;
+	}
+	.profile-container #text-container {
+		margin-left: 8px;
+		grid-column: 2;
+		grid-row: 1;
+	}
 }
-/* index.html */
+/* media queries for responsive design */
+
+/* Animations */
+@keyframes expand_open {
+	0% { width: 0%; }
+	70% { opacity: 90%; }
+	100% { opacity: 100%; width: 100%; }
+}
+
+@keyframes appear {
+	0% { opacity: 0%; }
+	100% { opacity: 100%; }
+}
+
+@keyframes typing {
+  from { opacity: 100%; width: 0; }
+  to { opacity: 100%; width: 100%; }
+}
+/* Animations */
 
 /* about.html */
 .terminal-container {
-	width: 75%;
+	width: 84%;
 	margin: 24px auto 8px auto;
+	padding: 2px;
 	overflow: hidden;
 }
 
@@ -45,7 +92,7 @@
 
 	font-family: "Rajdhani";
 	font-weight: 400;
-	font-size: 8px;
+	font-size: 6px;
 	color: white;
 
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -59,15 +106,9 @@
 #line_4 { animation: typing 0.4s steps(20, end) 1.2s forwards; }
 #line_5 { animation: typing 0.4s steps(20, end) 1.6s forwards; }
 
-/* The typing effect */
-@keyframes typing {
-  from { opacity: 100%; width: 0; }
-  to { opacity: 100%; width: 100%; }
-}
-
 .popup {
+	margin: 28px 4px 4px 4px;
 	border: 1px solid white;
-	margin: 28px 8px 8px 8px;
 	height: 48px;
 	max-width: 98%;
 	opacity: 0%;
@@ -102,7 +143,6 @@
 
 	font-family: "Rajdhani";
 	font-weight: 500;
-	font-size: 18px;
 	color: white;
 
 	opacity: 0%;
@@ -126,14 +166,86 @@
 	animation: appear 0.2s linear 1.4s forwards;
 }
 
-@keyframes expand_open {
-	0% { width: 0%; }
-	70% { opacity: 90%; }
-	100% { opacity: 100%; width: 100%; }
+.section { margin: 48px 0px 0px 8px; }
+
+.profile-container {
+	display: inline-grid;
+	vertical-align: top;
+	width: 0%;
+	opacity: 0%;
+	animation: expand_open 0.8s ease-out 2.8s forwards;
 }
 
-@keyframes appear {
-	0% { opacity: 0%; }
-	100% { opacity: 100%; }
+.profile-container #text-container {
+	font-family: "Rajdhani";
+	color: white;
+}
+
+.profile-container h1 {
+	font-weight: 500;
+	font-size: 14px;
+	border-bottom: 1px solid white;
+}
+
+.profile-container h2 {
+	font-weight: 700;
+	font-size: 16px;
+}
+
+.profile-container h3 {
+	font-weight: 500;
+	font-size: 10px;
+}
+
+#profile-image {
+	width: 0%;
+	animation: expand_open 0.8s ease-out 2.8s forwards;
+}
+
+.text-container {
+	display: inline-block;
+
+	border: 2px solid white;
+
+	opacity: 0%;
+	width: 0%;
+	animation: expand_open 0.8s ease-out 2.8s forwards;
+}
+
+.text-container #title-bar {
+	width: 100%;
+	border-bottom: 2px solid white;
+}
+
+.window-icon {
+	display: inline-block;
+	vertical-align: middle;
+	height: 16px;
+	margin: 1px 0px 2px 2px;
+}
+
+.text-container h1 {
+	display: inline-block;
+	margin-top: 2px;
+
+	font-family: "Rajdhani";
+	font-weight: 500;
+	font-size: 14px;
+	letter-spacing: 2px;
+
+	color: white;
+}
+
+.windowed-text {
+	overflow: hidden;
+
+	margin: 2%;
+
+	font-family: "Rajdhani";
+	font-weight: 500;
+	color: white;
+	opacity: 0%;
+
+	animation: appear 0.2s linear 3.6s forwards;
 }
 /* about.html */
