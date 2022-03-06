@@ -17,6 +17,7 @@
 .terminal-container {
 	width: 75%;
 	margin: 24px auto 8px auto;
+	overflow: hidden;
 }
 
 .title-bar {
@@ -44,7 +45,7 @@
 
 	font-family: "Rajdhani";
 	font-weight: 400;
-	font-size: 10px;
+	font-size: 8px;
 	color: white;
 
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -68,6 +69,7 @@
 	border: 1px solid white;
 	margin: 28px 8px 8px 8px;
 	height: 48px;
+	max-width: 98%;
 	opacity: 0%;
 	animation: expand_open 0.8s ease-out 0.8s forwards;
 }
