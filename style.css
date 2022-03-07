@@ -212,10 +212,6 @@
 
 	font-family: "Rajdhani";
 	color: white;
-
-	width: 0%;
-	opacity: 0%;
-	animation: expand_open 0.8s ease-out 2.8s forwards;
 }
 
 .image-container {
@@ -226,13 +222,18 @@
 
 #profile-image {
 	margin: 0px 0px 6% 6%;
+	opacity: 0%;
+	animation: appear 0.1s linear 3.2s forwards;
+}
+
+#profile-image-frame {
+	opacity: 0%;
+	width: 0%;
+	animation: expand_open 0.2s ease-out 2.8s forwards;
 }
 
 #profile-image, #profile-image-frame {
 	grid-row: 1; grid-column: 1;
-	opacity: 0%;
-	width: 0%;
-	animation: expand_open 0.8s ease-out 2.8s forwards;
 }
 
 .grid-container {
@@ -243,7 +244,7 @@
 
 #education-info, #contact-info {
 	opacity: 0%;
-	animation: appear 0.2s linear 2.8s forwards;
+	animation: appear 0.2s linear 3.0s forwards;
 }
 
 .grid-container h1 {
@@ -275,6 +276,9 @@
 	font-weight: 400;
 	color: black;
 	background-color: white;
+
+	opacity: 0%;
+	animation: appear 0.2s linear 3.0s forwards;
 }
 
 .image-container h1 {
@@ -296,7 +300,7 @@
 
 	opacity: 0%;
 	width: 0%;
-	animation: expand_open 0.8s ease-out 2.8s forwards;
+	animation: expand_open 0.8s ease-out 3.0s forwards;
 }
 
 .text-container #title-bar {
@@ -334,6 +338,6 @@
 	color: white;
 	opacity: 0%;
 
-	animation: appear 0.2s linear 3.6s forwards;
+	animation: appear 0.2s linear 3.2s forwards;
 }
 /* about.html */
