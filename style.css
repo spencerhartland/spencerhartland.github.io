@@ -12,11 +12,15 @@
 	/* about.html page header */
 
 	/* about.html README section */
-	.section { display: inline-block; }
 	.text-container { max-width: 70%; }
 	.windowed-text { font-size: 100%; }
-	.profile-container { max-width: 28%; }
 	#profile-image { max-width: 256px; }
+	.grid-container {
+		grid-row: 1;
+		grid-column: 2;
+	}
+	.image-container h1 { font-size: 22px; }
+	.image-container h2 { font-size: 12px; }
 	/* about.html README section */
 }
 
@@ -33,38 +37,26 @@
 	/* about.html page header */
 
 	/* about.html README section */
-	.section { display: inline-grid; }
 	.text-container {
 		grid-column: 1;
 		grid-row: 2;
-		max-width: 98%;
+		max-width: 80%;
 	}
 	.windowed-text { font-size: 80%; }
-	#profile-image {
-		max-width: 128px;
-	}
+	#profile-image { max-width: 128px; }
 	.grid-container {
 		display: inline-grid;
 		width: fit-content;
-		grid-column-gap: 32px;
-		margin-bottom: 32px;
-	}
-	#education-info {
-		grid-column: 1;
-		grid-row: 1;
-	}
-	#contact-info {
-		grid-column: 2;
-		grid-row: 1;
-	}
-	/* about.html README section */
-}
+		grid-row-gap: 12px;
 
-/* Even smaller devices */
-@media only screen and (max-width: 350px) {
-	.grid-container {
-		display: inline-block;
+		margin-top: 18px;
+
+		grid-row: 2;
+		grid-column: 1;
 	}
+	.image-container h1 { font-size: 16px; }
+	.image-container h2 { font-size: 10px; }
+	/* about.html README section */
 }
 /* media queries for responsive design */
 
@@ -96,7 +88,7 @@
 /* about.html */
 .terminal-container {
 	width: 84%;
-	margin: 24px auto 8px auto;
+	margin: 0px auto 48px auto;
 	padding: 2px;
 	overflow: hidden;
 }
@@ -149,7 +141,7 @@
 #line_9 { animation: typing 0.4s steps(20, end) 3.2s forwards; }
 
 .popup {
-	margin: 28px 4px 4px 4px;
+	margin-top: 28px;
 	border: 1px solid white;
 	height: 48px;
 	max-width: 98%;
@@ -208,43 +200,52 @@
 	animation: appear 0.2s linear 1.4s forwards;
 }
 
-.section { margin: 48px 0px 0px 8px; }
+.section { display: inline-grid; }
 
 .profile-container {
 	display: inline-grid;
+	grid-column-gap: 16px;
 	vertical-align: top;
+	max-width: fit-content;
+	margin: 0px auto 48px auto;
+
+	font-family: "Rajdhani";
+	color: white;
+
 	width: 0%;
 	opacity: 0%;
 	animation: expand_open 0.8s ease-out 2.8s forwards;
 }
 
-#education-info, #contact-info {
-	font-family: "Rajdhani";
-	color: white;
+.image-container {
+	grid-row: 1;
+	grid-column: 1;
+}
 
+#education-info, #contact-info {
 	opacity: 0%;
 	animation: appear 0.2s linear 2.8s forwards;
 }
 
-.profile-container h1 {
+.grid-container h1 {
 	font-weight: 500;
 	font-size: 16px;
 	border-bottom: 1px solid white;
-	margin: 16px 0px 8px 0px;
+	margin: 0px 0px 8px 0px;
 	width: fit-content;
 }
 
-.profile-container h2 {
+.grid-container h2 {
 	font-weight: 700;
 	font-size: 20px;
 }
 
-.profile-container h3 {
+.grid-container h3 {
 	font-weight: 500;
 	font-size: 12px;
 }
 
-.profile-container p {
+.grid-container p {
 	font-weight: 400;
 	font-size: 12px;
 }
@@ -252,6 +253,18 @@
 #profile-image {
 	width: 0%;
 	animation: expand_open 0.8s ease-out 2.8s forwards;
+}
+
+.image-container h1, .image-container h2 {
+	width: fit-content;
+	padding: 0px 4px 0px 4px;
+	font-weight: 400;
+	color: black;
+	background-color: white;
+}
+
+.image-container h1 {
+	margin-bottom: 2px;
 }
 
 .icon-text p {
@@ -262,6 +275,7 @@
 
 .text-container {
 	display: inline-block;
+	margin: 0px auto 48px auto;
 	overflow: hidden;
 
 	border: 2px solid white;
