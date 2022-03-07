@@ -1,59 +1,93 @@
 /* media queries for responsive design */
 /* Larger Devices */
 @media only screen and (min-width: 600px) {
+	/* index.html artwork */
 	.landing_container img {
 		max-height: 95vh;
 	}
+	/* index.html artwork */
+
+	/* about.html page header */
 	#popup-bottom h1 { font-size: 18px; }
+	/* about.html page header */
+
+	/* about.html README section */
 	.section { display: inline-block; }
-	.text-container { max-width: 67%; }
-	.windowed-text { font-size: 80%; }
-	.profile-container { max-width: 30%; }
-	.profile-container #text-container {
-		margin-top: 8px;
-		grid-column: 1;
-		grid-row: 2;
-	}
+	.text-container { max-width: 70%; }
+	.windowed-text { font-size: 100%; }
+	.profile-container { max-width: 28%; }
+	#profile-image { max-width: 256px; }
+	/* about.html README section */
 }
 
 /* Samller devices */
 @media only screen and (max-width: 600px) {
+	/* index.html artwork */
 	.landing_container img {
 		max-height: 90vh;
 	}
+	/* index.html artwork */
+
+	/* about.html page header */
 	#popup-bottom h1 { font-size: 14px; }
+	/* about.html page header */
+
+	/* about.html README section */
 	.section { display: inline-grid; }
 	.text-container {
 		grid-column: 1;
 		grid-row: 2;
 		max-width: 98%;
 	}
-	.windowed-text { font-size: 60%; }
-	.profile-container {
-		max-width: 60%;
-		margin-bottom: 8px;
+	.windowed-text { font-size: 80%; }
+	#profile-image {
+		max-width: 128px;
 	}
-	.profile-container #text-container {
-		margin-left: 8px;
+	.grid-container {
+		display: inline-grid;
+		width: fit-content;
+		grid-column-gap: 32px;
+		margin-bottom: 32px;
+	}
+	#education-info {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	#contact-info {
 		grid-column: 2;
 		grid-row: 1;
+	}
+	/* about.html README section */
+}
+
+/* Even smaller devices */
+@media only screen and (max-width: 350px) {
+	.grid-container {
+		display: inline-block;
 	}
 }
 /* media queries for responsive design */
 
 /* Animations */
+/* Animate opacity and width from 0-100% to simulate the look of windows opening
+ on a computer. */
 @keyframes expand_open {
 	0% { width: 0%; }
 	70% { opacity: 90%; }
 	100% { opacity: 100%; width: 100%; }
 }
 
+/* Animate opacity from 0-100% */
 @keyframes appear {
 	0% { opacity: 0%; }
 	100% { opacity: 100%; }
 }
 
+/* Animate width 0-100%, to be applied to a container of text with the
+'overflow' property set to 'hidden.' */
 @keyframes typing {
+	/* Opacity set to 100% immediately because the text's default should be 0% so
+	as to remain hidden until the animation occurs. */
   from { opacity: 100%; width: 0; }
   to { opacity: 100%; width: 100%; }
 }
@@ -72,7 +106,6 @@
 	max-width: 20%;
 	margin: 8px 0px 0px 8px;
 	padding: 1px 0px 0px 8px;
-	background-color: white;
 
 	font-family: "Rajdhani";
 	font-weight: 500;
@@ -80,6 +113,9 @@
 
 	animation: expand_open 1.2s ease-in-out 0s forwards;
 }
+
+.title-bar#about { background-color: white; color: black; }
+.title-bar#projects { background-color: black; color: white; }
 
 .typing-text {
 	display: inline-block;
@@ -93,18 +129,24 @@
 	font-family: "Rajdhani";
 	font-weight: 400;
 	font-size: 6px;
-	color: white;
 
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: nowrap; /* Keeps the content on a single line */
   letter-spacing: 1px; /* Adjust as needed */
 }
 
+.typing-text#about { color: white; }
+.typing-text#projects { color: black; }
+
 #line_1 { animation: typing 0.4s steps(20, end) 0s forwards; }
 #line_2 { animation: typing 0.4s steps(20, end) 0.4s forwards; }
 #line_3 { animation: typing 0.4s steps(20, end) 0.8s forwards; }
 #line_4 { animation: typing 0.4s steps(20, end) 1.2s forwards; }
 #line_5 { animation: typing 0.4s steps(20, end) 1.6s forwards; }
+#line_6 { animation: typing 0.4s steps(20, end) 2.0s forwards; }
+#line_7 { animation: typing 0.4s steps(20, end) 2.4s forwards; }
+#line_8 { animation: typing 0.4s steps(20, end) 2.8s forwards; }
+#line_9 { animation: typing 0.4s steps(20, end) 3.2s forwards; }
 
 .popup {
 	margin: 28px 4px 4px 4px;
@@ -176,25 +218,35 @@
 	animation: expand_open 0.8s ease-out 2.8s forwards;
 }
 
-.profile-container #text-container {
+#education-info, #contact-info {
 	font-family: "Rajdhani";
 	color: white;
+
+	opacity: 0%;
+	animation: appear 0.2s linear 2.8s forwards;
 }
 
 .profile-container h1 {
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 16px;
 	border-bottom: 1px solid white;
+	margin: 16px 0px 8px 0px;
+	width: fit-content;
 }
 
 .profile-container h2 {
 	font-weight: 700;
-	font-size: 16px;
+	font-size: 20px;
 }
 
 .profile-container h3 {
 	font-weight: 500;
-	font-size: 10px;
+	font-size: 12px;
+}
+
+.profile-container p {
+	font-weight: 400;
+	font-size: 12px;
 }
 
 #profile-image {
@@ -202,8 +254,15 @@
 	animation: expand_open 0.8s ease-out 2.8s forwards;
 }
 
+.icon-text p {
+	display: inline-block;
+	font-weight: 500;
+	font-size: 12px;
+}
+
 .text-container {
 	display: inline-block;
+	overflow: hidden;
 
 	border: 2px solid white;
 
@@ -214,14 +273,15 @@
 
 .text-container #title-bar {
 	width: 100%;
+	padding-left: 8px;
 	border-bottom: 2px solid white;
 }
 
-.window-icon {
+.small-icon {
 	display: inline-block;
 	vertical-align: middle;
-	height: 16px;
-	margin: 1px 0px 2px 2px;
+	height: 14px;
+	margin: 0px 2px 2px 0px;
 }
 
 .text-container h1 {
@@ -239,7 +299,7 @@
 .windowed-text {
 	overflow: hidden;
 
-	margin: 2%;
+	margin: 4%;
 
 	font-family: "Rajdhani";
 	font-weight: 500;

@@ -29,10 +29,10 @@
 
     <div class="terminal-container">
       <!-- Page title -->
-      <div class="title-bar">ABOUT</div>
+      <div class="title-bar" id="about">ABOUT</div>
 
       <!-- Terminal output text -->
-      <div class="typing-text">
+      <div class="typing-text" id="about">
         <h1 id="line_1">: PROC_ID=00111 976 UNPACKING RESOURCES... | "README"</h1>
         <h1 id="line_2">: PROC_ID=00111 984 READING DATABASE... | "EDUCATION"</h1>
         <h1 id="line_3">: PROC_ID=00222 001 COMPILING DPENDENCIES... | "SKILLS"</h1>
@@ -55,20 +55,31 @@
       <div class="section">
         <div class="profile-container">
           <img src="Assets/profile_image.png" id="profile-image">
-          <div id="text-container">
-            <h1>EDUCATION</h1>
-            <h2>UC SAN DIEGO<h2>
-            <h3>COMPUTER SCIENCE</h3>
+          <div class="grid-container">
+            <div id="education-info">
+              <h1>EDUCATION</h1>
+              <h2>UC SAN DIEGO<h2>
+              <h3>COMPUTER SCIENCE</h3>
+            </div>
+            <div id="contact-info">
+              <h1>CONTACT</h1>
+              <div class="icon-text">
+                <img class="small-icon" src="Assets/mail_icon.svg">
+                <p>E-MAIL</p>
+              </div>
+              <p>spencerhartland@icloud.com</p>
+              <p>spencerhartland@apple.com</p>
+          </div>
           </div>
         </div>
         <div class="text-container">
           <div id="title-bar">
-            <img class="window-icon" src="Assets/file_icon.svg"></img>
+            <img class="small-icon" src="Assets/file_icon.svg"></img>
             <h1>README</h1>
           </div>
           <p class="windowed-text">
             Hello, I'm Spencer. This is my personal website! I wrote the site
-            and designed all graphics and UI elements.<br><br>I've worked in
+            and designed all graphics, UI elements, and animations.<br><br>I've worked in
             retail at Apple since 2019 when I moved to San Diego to study
             Computer Science at UC San Diego. At Apple, I'm an Operations
             Specialist so I deal with inventory management and back-of-house

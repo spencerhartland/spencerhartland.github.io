@@ -7,14 +7,16 @@
 	.st1{display:inline;}
 	.st2{fill:#FFFFFF;}
 </style>
-<g id="Layer_2" class="st0">
+<g id="Layer_1" class="st0">
 	<rect class="st1" width="128" height="128"/>
 </g>
-<g id="Layer_1">
+<g id="Layer_2">
 	<g>
 		<g>
-			<path class="st2" d="M95.35,0H15.5v128h97V17.76L95.35,0z M94.75,87.44h-61.5v-10h61.5V87.44z M94.75,69h-61.5V59h61.5V69z
-				 M94.75,50.56h-61.5v-10h61.5V50.56z"/>
+			<g>
+				<polygon class="st2" points="64,71.64 0,21.14 0,114.5 128,114.5 128,21.14 				"/>
+				<polygon class="st2" points="118.31,13.5 9.69,13.5 64,56.36 				"/>
+			</g>
 		</g>
 	</g>
 </g>
