@@ -15,7 +15,10 @@
 	.text-container { max-width: 70%; }
 	.windowed-text { font-size: 100%; }
 	#profile-image { max-width: 256px; }
+	#profile-image-frame { max-width: 272px; }
 	.grid-container {
+		grid-row-gap: 12px;
+
 		grid-row: 1;
 		grid-column: 2;
 	}
@@ -44,11 +47,9 @@
 	}
 	.windowed-text { font-size: 80%; }
 	#profile-image { max-width: 128px; }
+	#profile-image-frame { max-width: 136px; }
 	.grid-container {
-		display: inline-grid;
-		width: fit-content;
 		grid-row-gap: 12px;
-
 		margin-top: 18px;
 
 		grid-row: 2;
@@ -218,8 +219,26 @@
 }
 
 .image-container {
+	display: inline-grid;
 	grid-row: 1;
 	grid-column: 1;
+}
+
+#profile-image {
+	margin: 0px 0px 6% 6%;
+}
+
+#profile-image, #profile-image-frame {
+	grid-row: 1; grid-column: 1;
+	opacity: 0%;
+	width: 0%;
+	animation: expand_open 0.8s ease-out 2.8s forwards;
+}
+
+.grid-container {
+	display: inline-grid;
+	width: fit-content;
+	height: fit-content;
 }
 
 #education-info, #contact-info {
@@ -248,11 +267,6 @@
 .grid-container p {
 	font-weight: 400;
 	font-size: 12px;
-}
-
-#profile-image {
-	width: 0%;
-	animation: expand_open 0.8s ease-out 2.8s forwards;
 }
 
 .image-container h1, .image-container h2 {
