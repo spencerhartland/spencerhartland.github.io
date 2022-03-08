@@ -17,8 +17,6 @@
 	#profile-image { max-width: 256px; }
 	#profile-image-frame { max-width: 272px; }
 	.grid-container {
-		grid-row-gap: 12px;
-
 		grid-row: 1;
 		grid-column: 2;
 	}
@@ -49,7 +47,6 @@
 	#profile-image { max-width: 128px; }
 	#profile-image-frame { max-width: 136px; }
 	.grid-container {
-		grid-row-gap: 12px;
 		margin-top: 18px;
 
 		grid-row: 2;
@@ -238,21 +235,24 @@
 
 .grid-container {
 	display: inline-grid;
-	width: fit-content;
+	opacity: 0%;
+	width: 0%;
 	height: fit-content;
+	max-width: 180px;
+	animation: expand_open 0.2s ease-out 2.8s forwards;
 }
 
-#education-info, #contact-info {
+#edu-title, #contact-title {
 	opacity: 0%;
+	max-width: 150px;
 	animation: appear 0.2s linear 3.0s forwards;
 }
 
-.grid-container h1 {
-	font-weight: 500;
-	font-size: 16px;
-	border-bottom: 1px solid white;
-	margin: 0px 0px 8px 0px;
-	width: fit-content;
+#edu-info, #contact-info {
+	margin-left: 16px;
+	width: 100%;
+	opacity: 0%;
+	animation: appear 0.2s linear 3.0s forwards;
 }
 
 .grid-container h2 {
@@ -296,7 +296,7 @@
 	margin: 0px auto 48px auto;
 	overflow: hidden;
 
-	border: 2px solid white;
+	border: 1px solid white;
 
 	opacity: 0%;
 	width: 0%;
@@ -306,14 +306,14 @@
 .text-container #title-bar {
 	width: 100%;
 	padding-left: 8px;
-	border-bottom: 2px solid white;
+	border-bottom: 1px solid white;
 }
 
 .small-icon {
 	display: inline-block;
 	vertical-align: middle;
 	height: 14px;
-	margin: 0px 2px 2px 0px;
+	margin: 0px 2px 4px 0px;
 }
 
 .text-container h1 {
