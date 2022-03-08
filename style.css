@@ -88,7 +88,7 @@
 
 /* about.html */
 .terminal-container {
-	width: 84%;
+	width: 80%;
 	margin: 0px auto 48px auto;
 	padding: 2px;
 	overflow: hidden;
@@ -201,7 +201,7 @@
 	animation: appear 0.2s linear 1.4s forwards;
 }
 
-.section { display: inline-grid; }
+.section { display: inline-grid; width: 100%; }
 
 .profile-container {
 	display: inline-grid;
@@ -339,5 +339,24 @@
 	opacity: 0%;
 
 	animation: appear 0.2s linear 3.2s forwards;
+}
+
+#skills-section-container {
+	display: inline-grid;
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+
+#skills-title {
+	opacity: 0%;
+	width: 0%;
+	max-width: 150px;
+	animation: expand_open 1.2s ease-in-out 3.2s forwards;
+}
+
+.skill {
+	max-width: 200px;
+	margin: 4px;
 }
 /* about.html */
