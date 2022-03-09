@@ -13,16 +13,16 @@ function hover(element) {
   element.setAttribute('src', 'Assets/folder_icon_hover.svg');
   document.addEventListener('mousemove', onMouseMove);
   if(element.id == "personal-site") {
-    $("#personal-site-details").css('opacity', '100');
+    $("#personal-site-details").css('display', 'grid');
   }
   if(element.id == "food-bowl") {
-    $("#food-bowl-details").css('opacity', '100');
+    $("#food-bowl-details").css('display', 'grid');
   }
 }
 
 function unhover(element) {
   element.setAttribute('src', 'Assets/folder_icon_default.svg');
-  $("#personal-site-details").css('opacity', '0');
-  $("#food-bowl-details").css('opacity', '0');
+  $("#personal-site-details").css('display', 'none');
+  $("#food-bowl-details").css('display', 'none');
   document.removeEventListener('mousemove', onMouseMove);
 }
