@@ -1,0 +1,37 @@
+.project-path {
+  font-family: "Rajdhani";
+  font-weight: 500;
+  font-size: 18px;
+
+  width: 80%;
+  margin: 48px auto 24px auto;
+}
+
+.img-container {
+  width: 100%;
+  text-align: center;
+}
+
+#complete-model-photo {
+  width: 80%;
+}
+
+.project-title {
+  width: 80%;
+  margin: 24px auto 0px auto;
+}
+
+.project-title h1 {
+  font-family: "Rajdhani";
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.project-title p {
+  font-family: "Rajdhani";
+  font-weight: 500;
+  font-size: 16px;
+
+  width: 50%;
+  opacity: 60%;
+}
