@@ -15,26 +15,72 @@
     <script src="jquery-3.6.0.min.js"></script>
     <!-- Navigation bar -->
     <script src="nav.js"></script>
+    <!-- Allows hover on folder icons -->
+    <script src="projects.js"></script>
   </head>
 
   <body>
+    <!-- Navigation -->
     <nav-bar></nav-bar>
 
-    <div class="terminal-container">
+    <div id="projects-container">
       <!-- Page title -->
-      <div class="title-bar" id="projects">PROJECTS</div>
+      <div class="terminal-container" id="projects">
+        <!-- Page title -->
+        <div class="title-bar" id="projects">PROJECTS</div>
 
-      <!-- Binary text -->
-      <div class="typing-text" id="projects">
-        <h1 id="line_1">01001101</h1> <!-- M -->
-        <h1 id="line_2">01100001</h1> <!-- A -->
-        <h1 id="line_3">01100011</h1> <!-- C -->
-        <h1 id="line_4">01101001</h1> <!-- I -->
-        <h1 id="line_5">01101110</h1> <!-- N -->
-        <h1 id="line_6">01110100</h1> <!-- T -->
-        <h1 id="line_7">01101111</h1> <!-- O -->
-        <h1 id="line_8">01110011</h1> <!-- S -->
-        <h1 id="line_9">01101000</h1> <!-- H -->
+        <!-- Binary text -->
+        <div class="typing-text" id="projects">
+          <h1 id="line_1">01001101</h1> <!-- M -->
+          <h1 id="line_2">01100001</h1> <!-- A -->
+          <h1 id="line_3">01100011</h1> <!-- C -->
+          <h1 id="line_4">01101001</h1> <!-- I -->
+          <h1 id="line_5">01101110</h1> <!-- N -->
+          <h1 id="line_6">01110100</h1> <!-- T -->
+          <h1 id="line_7">01101111</h1> <!-- O -->
+          <h1 id="line_8">01110011</h1> <!-- S -->
+          <h1 id="line_9">01101000</h1> <!-- H -->
+        </div>
+      </div>
+      <!-- Page title -->
+
+      <!-- Folders -->
+      <div class="section" id="projects">
+        <div class="projects-container">
+          <h1>/Projects</h1>
+          <div class="projects-directory-container">
+            <a href="personal-site.html" class="project">
+              <img src="Assets/folder_icon_default.svg" class="folder-icon" id="personal-site" onmouseover="hover(this);" onmouseout="unhover(this);">
+              <h1>Personal_Site</h1>
+            </a>
+            <a href="food-bowl.html" class="project">
+              <img src="Assets/folder_icon_default.svg" class="folder-icon" id="food-bowl" onmouseover="hover(this);" onmouseout="unhover(this);">
+              <h1>Auto_Food_Bowl</h1>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mouseover details -->
+      <div class="details" id="personal-site-details">
+        <img src="Assets/project_details_tooltip.svg" class="tooltip">
+        <div class="detail-text">
+          <h1>Personal_Site</h1>
+          <p>Take a look at the code behind the website you're on right now!
+          The codebase consists of HTML, CSS, and JavaScript. jQuery is used for
+          much of the user interaction.</p>
+        </div>
+      </div>
+
+      <div class="details" id="food-bowl-details">
+        <img src="Assets/project_details_tooltip.svg" class="tooltip">
+        <div class="detail-text">
+          <h1>Auto_Food_Bowl</h1>
+          <p>Work in progress. I'm building my dogs a 3D printed, Raspberry Pi
+          powered food bowl! The codebase is mostly Python so far (in an effort
+          to learn). It's also my first time working with servos or weight
+          sensors.</p>
+        </div>
       </div>
     </div>
   </body>

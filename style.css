@@ -360,3 +360,80 @@
 	margin: 4px;
 }
 /* about.html */
+
+/* projects.html */
+.title-bar#projects { max-width: 35%; }
+.typing-text#projects { opacity: 40%; }
+
+#projects-container {
+	display: inline-grid;
+	width: 100%
+}
+
+.terminal-container#projects { grid-row: 1; grid-column: 1; }
+.section#projects { grid-row: 1; grid-column: 1; }
+
+.projects-container {
+	width: 70%;
+	margin: 48px auto 24px auto;
+	font-family: "Rajdhani";
+}
+
+.projects-container h1 {
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.projects-directory-container {
+	width: 100%;
+	margin-top: 16px;
+}
+
+.project {
+	display: grid;
+	margin-bottom: 16px;
+	width: fit-content;
+}
+
+.project h1 {
+	font-size: 14px;
+	max-width: fit-content;
+}
+
+.folder-icon {
+	width: 128px;
+	margin: 0px 16px 8px 0px;
+}
+
+.details {
+	position: absolute;
+	display: grid;
+	width: 256px;
+	opacity: 0%;
+}
+
+.detail-text {
+	grid-row: 1;
+	grid-column: 1;
+
+	margin: 16px 16px 16px 32px;
+
+	font-family: "Rajdhani";
+	color: white;
+}
+
+.detail-text h1 {
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.detail-text p {
+	font-weight: 400;
+	font-size: 12px;
+}
+
+.tooltip {
+	grid-row: 1;
+	grid-column: 1;
+}
+/* projects.html */

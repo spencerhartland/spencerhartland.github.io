@@ -147,7 +147,6 @@ class NavigationBar extends HTMLElement {
 
 customElements.define('nav-bar', NavigationBar);
 
-// Nav icon animation
 $(document).ready(function(){
   let root = document.documentElement;
 
