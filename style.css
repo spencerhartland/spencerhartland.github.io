@@ -362,6 +362,10 @@
 /* about.html */
 
 /* projects.html */
+#hide {
+	display: none;
+}
+
 .title-bar#projects { max-width: 35%; }
 .typing-text#projects { opacity: 40%; }
 

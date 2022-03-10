@@ -1,5 +1,8 @@
-.project-path {
+body {
   font-family: "Rajdhani";
+}
+
+.project-path {
   font-weight: 500;
   font-size: 18px;
 
@@ -16,22 +19,46 @@
   width: 80%;
 }
 
-.project-title {
+.project-page-section {
   width: 80%;
   margin: 24px auto 0px auto;
 }
 
-.project-title h1 {
-  font-family: "Rajdhani";
+.project-page-section h1 {
   font-weight: 700;
   font-size: 64px;
 }
 
-.project-title p {
-  font-family: "Rajdhani";
+.project-page-section h2 {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.project-page-section h3 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.project-page-section p {
   font-weight: 500;
   font-size: 16px;
+}
+.project-page-header p { opacity: 60%; }
 
-  width: 50%;
+.components-list {
+  list-style: none;
+  font-weight: 500;
+  font-size: 16px;
   opacity: 60%;
+}
+
+#electronics-photo {
+  width: 100%;
+  margin: 24px 0px 24px 0px;
+}
+
+.project-video {
+  width: 100%;
+  margin: 24px 0px 24px 0px;
 }

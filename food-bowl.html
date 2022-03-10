@@ -27,7 +27,7 @@
       <div class="img-container">
         <img src="Assets/complete_model.jpg" id="complete-model-photo">
       </div>
-      <div class="project-title">
+      <div class="project-page-section">
         <h1>Automatic Dog Food Bowl<h1>
         <p>
           A smart food bowl powered by a Raspberry Pi running Linux. The device
@@ -35,10 +35,84 @@
           the day using a NEMA17 steppper motor and a 3D printed auger
           mechanism. Dual 128x32 OLED displays allow interaction with the user
           and real-time food supply level monitoring via load sensors in the
-          base.
+          base. All non-electronic parts will be 3D printed.
         </p>
       </div>
     </div>
     <!-- Section: Header -->
+
+    <!-- Section: Components -->
+    <div class="project-page-section">
+      <h3>Components</h3>
+      <ul class="components-list">
+        <li>Raspberry Pi Zero W</li>
+        <li>128x32 monochrome OLED (2)</li>
+        <li>Adafruit TCA9548A I2C Multiplexer</li>
+        <li>NEMA17 short body stepper motor</li>
+        <li>A4988 stepper motor driver</li>
+        <li>Power supply for both motor and RPi</li>
+        <li>Overture PLA – white</li>
+      </ul>
+    </div>
+
+    <div class=project-page-section>
+      <h2>Overview</h2>
+      <p>
+        Originally, this project was meant to be a simple retrofit of my dogs'
+        (Kobe and Chile) current gravity-powered food bowl. I wanted to learn
+        more about programming hardware like displays and motors, and Kobe was
+        eating a little too much so we wanted to slow him down. The plan was to
+        add a Raspberry Pi 4+, a motor with a 3D-printed feed mechanism, and a
+        single display to their existing bowl.<br><br>As I gained experience in
+        Fusion360 and began to work on the electronics, however, I realized I
+        could do much more. I now believe the components list is final, and the
+        design of the device should only need some minor tweaks to some parts
+        before printing. This project is still a work in progress: as of right
+        now, the electronics and software drivers for the displays are finished;
+        the motor's software still needs some work; the feeder extrusion is
+        fully printed and temporarily assembled with its display inside; the
+        rest of the device still needs to be printed and assembled.<br><br>If
+        you have any questions or suggestions regarding this project, send me an
+        email!
+      </p>
+    </div>
+
+    <div class=project-page-section>
+      <div class="img-container">
+        <img src="Assets/electronics.jpg"  id="electronics-photo">
+      </div>
+      <h2>Displays</h2>
+      <p>
+        Why two displays? I wanted to have a display for interaction with the
+        user of the device, but with this device there are two distinct users
+        who need different types of interaction. The dogs are the obvious first
+        user: they'll use the bowl to eat. The second user is me, the human.
+        As a human, I'm interested in knowing how much food is in the supply
+        chamber and when I need to fill it. Dogs are only interested in eating.
+        <br><br>The display at the top of the device shows humans the current
+        food level and indicates when to fill the chamber.<br><br>The display on
+        the front of the feeder extrusion plays a simple animation to draw the
+        attention of Kobe and Chile and notify them that food is about to come.
+      </p>
+      <br>
+      <video class="project-video" autoplay muted loop>
+        <source src="Assets/disp_00.mp4" type ="video/mp4">
+      </video>
+      <h3>Display 0 (human)</h3>
+      <p>
+        The video above shows the UI/animations for the human-facing display
+        (the bare OLED). I've written a python script to demonstrate the
+        functions of the display. First, you can see it cycle through food
+        levels 4 (full) through 1 (empty). Second, you can see the animation
+        intended to notify humans to fill the food supply chamber. Note: The
+        scanning effect is not visible in real life, I couldn't eliminate it in
+        video.
+      </p>
+      <br>
+      <video class="project-video" autoplay muted loop>
+        <source src="Assets/disp_01.mp4" type ="video/mp4">
+      </video>
+      <h3>Display 1 (dogs)</h3>
+    </div>
   </body>
 </html>
