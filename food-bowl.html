@@ -25,7 +25,7 @@
     <div class="project-page-header">
       <div class="project-path">/Projects/Auto_Food_Bowl</div>
       <div class="img-container">
-        <img src="Assets/complete_model.jpg" id="complete-model-photo">
+        <img src="Assets/complete_model.jpg" class="header-photo">
       </div>
       <div class="project-page-section">
         <h1>Automatic Dog Food Bowl<h1>
@@ -79,9 +79,9 @@
 
     <div class=project-page-section>
       <div class="img-container">
-        <img src="Assets/electronics.jpg"  id="electronics-photo">
+        <img src="Assets/electronics.jpg"  class="project-photo">
       </div>
-      <h2>Displays</h2>
+      <h2>Electronics</h2>
       <p>
         Why two displays? I wanted to have a display for interaction with the
         user of the device, but with this device there are two distinct users
@@ -93,6 +93,17 @@
         food level and indicates when to fill the chamber.<br><br>The display on
         the front of the feeder extrusion plays a simple animation to draw the
         attention of Kobe and Chile and notify them that food is about to come.
+        <br><br>The wiring is not final and is for testing only. I'm using
+        all-black wires for the aesthetic, of course. It's reminiscient of
+        modern Mac internals.
+      </p>
+      <br>
+      <h3>I2C Multiplexer</h3>
+      <p>
+        In order to avoid I2C address conflict when controlling multiple
+        displays via I2C with the Raspberry Pi, one must use a multiplexer. The
+        TCA9548A from Adafruit has eight I2C channels, way more than enough for the
+        two I'll be using here.
       </p>
       <br>
       <video class="project-video" autoplay muted loop>
@@ -113,6 +124,77 @@
         <source src="Assets/disp_01.mp4" type ="video/mp4">
       </video>
       <h3>Display 1 (dogs)</h3>
+      <p>
+        This video shows the animations for the dog-facing display
+        (the OLED hidden inside the feeder extrusion). First, the display
+        creates a glowing effect by blasting all pixels at full brightness and
+        then turning down the brightness over a period of time, repeatedly.
+        Next, the display shows a "waterdrop" animation that I intend to
+        indicate food falling from the extrusion. The OLED has this rounded
+        pill shape by being masked with some black vinyl. I wish I had used
+        white, because the black is somewhat visible through the thin layer of
+        PLA that blurs the screen's output.
+      </p>
+    </div>
+
+    <div class=project-page-section>
+      <h2>Software</h2>
+      <p>
+        You can check out all the code for this project over on
+        <a href="https://github.com/spencerhartland/auto_food_bowl">GitHub</a>.
+        I'll be sharing a few snippets here that relate to the UI and animations
+        shown above.
+      </p>
+      <br>
+      <h3>glowing_alert</h3>
+      <p>
+        This is the code that creates the glowing alert effect to notify the
+        dogs of a meal.
+      </p>
+      <br>
+      <script src="https://gist.github.com/spencerhartland/247ca931f370db51509736ddf96f291b.js"></script>
+      <br>
+    </div>
+
+    <div class=project-page-section>
+      <h2>Design</h2>
+      <p>
+        I intended the design of the device to be simple, user-friendly, and
+        modern. Many iterations led to the final design, and I think it both
+        looks good and provides a lot of function. The design is meant to
+        be modular so that each piece is small enough to fit on my printer's bed
+        and print in a reasonable amount of time.<br><br>The photos below show
+        the designs for the lid assembly and feeder extrusion (which you can
+        see printed above).
+      </p>
+      <div class="img-container">
+        <img src="Assets/lid_assembly.jpg"  class="project-photo">
+      </div>
+      <h3>Lid Assembly</h3>
+      <p>
+        The lid assembly has a channel built into it to allow cable management
+        for the human-facing display.
+      </p>
+      <br>
+      <div class="img-container">
+        <img src="Assets/dispenser_assembly.jpg"  class="project-photo">
+      </div>
+      <h3>Feeder Extrusion Assembly</h3>
+      <p>
+        Here, cable management is again designed into the parts surrounding the
+        display.
+      </p>
+    </div>
+
+    <div class=project-page-section>
+      <h2>Work in Progress</h2>
+      <p>
+        This project is a work in progress! As such, this page will be updated
+        somewhat often and things about the project might change. Also, any
+        questions, tips, or suggestions are welcome. Feel free to send me an
+        email at my iCloud address (on my <a href='about.html'>about</a> page).
+      </p>
+      <br>
     </div>
   </body>
 </html>
