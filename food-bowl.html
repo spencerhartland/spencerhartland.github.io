@@ -30,12 +30,12 @@
       <div class="project-page-section">
         <h1>Automatic Dog Food Bowl<h1>
         <p>
-          A smart food bowl powered by a Raspberry Pi running Linux. The device
-          will automatically dispense an appropriate amount of food throughout
-          the day using a NEMA17 steppper motor and a 3D printed auger
-          mechanism. Dual 128x32 OLED displays allow interaction with the users
-          and real-time food supply level monitoring via load sensors in the
-          base. All non-electronic parts will be 3D printed.
+          A smart pet food bowl powered by a Raspberry Pi running Linux! The
+          device is designed to automatically dispense a pre-determined amount
+          of food at regular intervals throughout the day, eliminating worries
+          of overeating and ensuring each meal is fresh and tasty. The companion
+          iOS app enables on-demand snacks or meals, schedule customization, and
+          remote monitoring.
         </p>
       </div>
     </div>
@@ -50,9 +50,8 @@
         <li>Adafruit TCA9548A I2C Multiplexer</li>
         <li>NEMA17 short body stepper motor</li>
         <li>A4988 stepper motor driver</li>
-        <li>Load sensor(s)</li>
+        <li>Load sensor</li>
         <li>Power supply for both motor and RPi</li>
-        <li>Overture PLA – white</li>
       </ul>
     </div>
 
@@ -60,22 +59,51 @@
       <h2>Overview</h2>
       <p>
         Originally, this project was meant to be a simple retrofit of my dogs'
-        (Kobe and Chile) current gravity-powered food bowl. I wanted to learn
-        more about programming hardware like displays and motors, and Kobe was
-        eating a little too much so we wanted to slow him down. The plan was to
-        add a Raspberry Pi 4+, a motor with a 3D-printed feed mechanism, and a
-        single display to their existing bowl.<br><br>As I gained experience in
-        Fusion360 and began to work on the electronics, however, I realized I
-        could do much more. I now believe the components list is final, and the
-        design of the device should only need some minor tweaks to some parts
-        before printing. This project is still a work in progress: as of right
-        now, the electronics and software drivers for the displays are finished;
-        the motor's software still needs some work; the feeder extrusion is
-        fully printed and temporarily assembled with its display inside; the
-        rest of the device still needs to be printed and assembled.<br><br>If
-        you have any questions or suggestions regarding this project, send me an
-        email!
+        (Kobe and Chile) current gravity-powered food bowl. Once I got started,
+        however, I quickly got carried away adding features. Owing to that, my
+        first foray into hardware has been an incredibly rewarding learning
+        experience!<br><br>As of now, the electronics are complete. The iOS
+        app is fully-functional and nearly complete, once I've implemented
+        the auto feeding and food storage monitoring systems in the device's
+        firmware, I'll be able to make those features functional in the app.
+        The backend code (server.py) is working but still needs some work to be
+        up to standard.<br><br>If you have any questions or suggestions
+        regarding this project, send me an email!
       </p>
+    </div>
+
+    <div class=project-page-section>
+      <h2>Software</h2>
+      <div class="img-container">
+        <img src="Assets/app_screenshots.png"  class="project-photo">
+      </div>
+      <h3>iOS App</h3>
+      <p>You can check out all the code for the iOS app over on
+      <a href="https://github.com/spencerhartland/auto_food_bowl_ios">GitHub</a>.
+      The companion app for the newly-named cyberbowl is nearly finished!
+      All features are complete, with the exception of schedule editing and
+      food storage monitoring. Those features aren't complete on the backend,
+      so I need to implement there first.<br><br>The app is written entirely in
+      Swift / SwiftUI with no external dependencies. Communication with the
+      device is handled over Wi-Fi: the app connects via local network and
+      communicates with a RESTful API written in Python running on the Pi.
+      Though not required to use the food bowl, the app enables on-demand
+      feeding, remote monitoring, and rich customization.</p>
+      <br>
+      <h3>Firmware</h3>
+      <p>The firmware is also available on
+      <a href="https://github.com/spencerhartland/auto_food_bowl_firmware">
+        GitHub</a>. The README provides a more detailed discussion of the
+        firmware's modules. In summary, each module is responsible for
+        controlling a single hardware component. The server module is the most
+        recently added, and is the backbone of the iOS companion app. The
+        server is pretty basic, it utilizes socket networking to receive requests
+        and send data back to the iOS app. As of now, the server API has
+        endpoints which allow: a "quick dispense," a "full" dispense of as much
+        food as is desired, turning the status LED on/off, setting the
+        status LED color, and testing the connection.
+      </p>
+      <br>
     </div>
 
     <div class=project-page-section>
@@ -84,104 +112,31 @@
       </div>
       <h2>Electronics</h2>
       <p>
-        Why two displays? I wanted to have a display for interaction with the
-        user of the device, but with this device there are two distinct users
-        who need different types of interaction. The dogs are the obvious first
-        user: they'll use the bowl to eat. The second user is me, the human.
-        As a human, I'm interested in knowing how much food is in the supply
-        chamber and when I need to fill it. Dogs are only interested in eating.
-        <br><br>The display at the top of the device shows humans the current
-        food level and indicates when to fill the chamber.<br><br>The display on
-        the front of the feeder extrusion plays a simple animation to draw the
-        attention of Kobe and Chile and notify them that food is about to come.
-        <br><br>The wiring is not final and is for testing only. I'm using
-        all-black wires for the aesthetic, of course. It's reminiscient of
-        modern Mac internals.
+        As I said, this is my first-ever project involving hardware. I am using
+        this project as an opportunity to learn as much as I can. At this point,
+        I feel pretty comfortable working with new components and figuring
+        things out as I go, so it's going pretty well!
       </p>
       <br>
-      <h3>I2C Multiplexer</h3>
-      <p>
-        In order to avoid I2C address conflict when controlling multiple
-        displays via I2C with the Raspberry Pi, one must use a multiplexer. The
-        TCA9548A from Adafruit has eight I2C channels, way more than enough for the
-        two I'll be using here.
-      </p>
-      <br>
+      <h3>Early display tests</h3>
+      <p>These videos show some early tests with animations on the device's OLEDs.</p>
       <video class="project-video" autoplay muted loop>
         <source src="Assets/disp_00.mp4" type ="video/mp4">
       </video>
-      <h3>Display 0 (human)</h3>
-      <p>
-        The video above shows the UI/animations for the human-facing display
-        (the bare OLED). I've written a python script to demonstrate the
-        functions of the display. First, you can see it cycle through food
-        levels 4 (full) through 1 (empty). Second, you can see the animation
-        intended to notify humans to fill the food supply chamber. Note: The
-        scanning effect is not visible in real life, I couldn't eliminate it in
-        video.
-      </p>
       <br>
       <video class="project-video" autoplay muted loop>
         <source src="Assets/disp_01.mp4" type ="video/mp4">
       </video>
-      <h3>Display 1 (dogs)</h3>
-      <p>
-        This video shows the animations for the dog-facing display
-        (the OLED hidden inside the feeder extrusion). First, the display
-        creates a glowing effect by blasting all pixels at full brightness and
-        then turning down the brightness over a period of time, repeatedly.
-        Next, the display shows a "glowdrop" animation that I intend to
-        indicate food falling from the extrusion. The OLED has this rounded
-        pill shape by being masked with some black vinyl. I wish I had used
-        white, because the black is somewhat visible through the thin layer of
-        PLA that blurs the screen's output.
-      </p>
-    </div>
-
-    <div class=project-page-section>
-      <h2>Software</h2>
-      <p>
-        You can check out all the code for this project over on
-        <a href="https://github.com/spencerhartland/auto_food_bowl">GitHub</a>.
-        I'll be sharing a few snippets here that relate to the UI and animations
-        shown above.
-      </p>
-      <br>
-      <h3>glowing_alert</h3>
-      <p>
-        This is the function that creates the glowing alert effect to notify the
-        dogs of a meal.
-      </p>
-      <br>
-      <script src="https://gist.github.com/spencerhartland/247ca931f370db51509736ddf96f291b.js"></script>
-      <br>
-      <p>
-        In order to create a smoother glowing effect, it starts off at 0%
-        brightness and displays a series of bitmap images.
-      </p>
-      <br>
-      <script src="https://gist.github.com/spencerhartland/08c9332b721b2e61649b845c96c3742e.js"></script>
-      <br>
-      <p>
-        This slowly fills the screen with more white pixels and, once it's full,
-        the display scales brightness up to 100%. In effect, this extends the
-        range of display brightness.<br><br>The rest of the animations – the
-        glowdrop, the food levels, the empty food supply chamber alert – all
-        fuction the same as this. A loop displays a series of bitmap images to
-        create the animations.
-      </p>
     </div>
 
     <div class=project-page-section>
       <h2>Design</h2>
       <p>
-        I intended the design of the device to be simple, user-friendly, and
-        modern. Many iterations led to the final design, and I think it both
-        looks good and provides a lot of function. The design is meant to
-        be modular so that each piece is small enough to fit on my printer's bed
-        and print in a reasonable amount of time.<br><br>The photos below show
-        the designs for the lid assembly and feeder extrusion (which you can
-        see printed above).
+        The design is still up in the air, but is next on the to-do list. The
+        design is meant to be modular so that each piece is small enough to fit
+        on my printer's bed and print in a reasonable amount of time.<br><br>The
+        photos below show possible designs for the lid assembly and feeder
+        extrusion (which you can see printed above).
       </p>
       <div class="img-container">
         <img src="Assets/lid_assembly.jpg"  class="project-photo">
