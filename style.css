@@ -276,19 +276,17 @@
 	font-size: 12px;
 }
 
-.image-container h1, .image-container h2 {
+#job-title {
 	width: fit-content;
-	padding: 0px 4px 0px 4px;
+	padding: 0px 16px 0px 16px;
+	margin-top: 4px;
+	font-size: 12px;
 	font-weight: 400;
 	color: black;
 	background-color: white;
 
 	opacity: 0%;
 	animation: appear 0.2s linear 3.0s forwards;
-}
-
-.image-container h1 {
-	margin-bottom: 2px;
 }
 
 .icon-text p {
@@ -302,7 +300,7 @@
 	margin: 0px auto 48px auto;
 	overflow: hidden;
 
-	border: 1px solid white;
+	border: 2px solid white;
 
 	opacity: 0%;
 	width: 0%;
@@ -312,14 +310,14 @@
 .text-container #title-bar {
 	width: 100%;
 	padding-left: 8px;
-	border-bottom: 1px solid white;
+	background-color: white;
 }
 
-.small-icon {
+.file-icon {
 	display: inline-block;
 	vertical-align: middle;
 	height: 14px;
-	margin: 0px 2px 4px 0px;
+	margin: 0px 2px 3px 0px;
 }
 
 .text-container h1 {
@@ -329,9 +327,8 @@
 	font-family: "Rajdhani";
 	font-weight: 500;
 	font-size: 14px;
-	letter-spacing: 2px;
 
-	color: white;
+	color: black;
 }
 
 .windowed-text {

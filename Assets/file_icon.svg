@@ -1,21 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Adobe Illustrator 24.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
-<style type="text/css">
-	.st0{display:none;}
-	.st1{display:inline;}
-	.st2{fill:#FFFFFF;}
-</style>
-<g id="Layer_2" class="st0">
-	<rect class="st1" width="128" height="128"/>
-</g>
-<g id="Layer_1">
-	<g>
-		<g>
-			<path class="st2" d="M95.35,0H15.5v128h97V17.76L95.35,0z M94.75,87.44h-61.5v-10h61.5V87.44z M94.75,69h-61.5V59h61.5V69z
-				 M94.75,50.56h-61.5v-10h61.5V50.56z"/>
-		</g>
-	</g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 128 128" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="Layer_1" vectornator:layerName="Layer_1">
+<path d="M95.35 0L15.5 0L15.5 128L112.5 128L112.5 17.76L95.35 0ZM64 87.44L33.25 87.44L33.25 77.44L64 77.44L64 87.44ZM94.75 69L33.25 69L33.25 59L94.75 59L94.75 69ZM94.75 50.56L64 50.56L64 40.56L94.75 40.56L94.75 50.56Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="path"/>
 </g>
 </svg>
