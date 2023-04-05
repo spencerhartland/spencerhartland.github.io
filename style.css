@@ -89,12 +89,17 @@
 }
 /* Animations */
 
+body {
+	text-align: center;
+}
+
 /* about.html */
 .terminal-container {
 	width: 80%;
 	margin: 0px auto 48px auto;
 	padding: 2px;
 	overflow: hidden;
+	text-align: left; 
 }
 
 .title-bar {
@@ -204,14 +209,24 @@
 	animation: appear 0.2s linear 1.4s forwards;
 }
 
-.section { display: inline-grid; width: 100%; }
+.section { 
+	text-align: center;
+	width: 100%;
+	margin: 48px auto 0px auto;
+}
+
+.centered-container {
+	display: inline-flex;
+	justify-content: flex-start;
+	text-align: left;
+  }
 
 .profile-container {
 	display: inline-grid;
+	margin: 0px auto 0px auto;
 	grid-column-gap: 16px;
 	vertical-align: top;
 	max-width: fit-content;
-	margin: 0px auto 48px auto;
 
 	font-family: "Rajdhani";
 	color: white;
@@ -254,9 +269,25 @@
 	animation: appear 0.2s linear 3.0s forwards;
 }
 
-#edu-info, #contact-info {
-	margin-left: 16px;
-	width: 100%;
+#edu-info {
+	width: 65%;
+	margin: 4px 0px 4px 16px;
+
+	opacity: 0%;
+	animation: appear 0.2s linear 3.0s forwards;
+}
+
+#contact-info {
+	width: fit-content;
+	margin: 4px 0px 0px 16px;
+	padding: 0px 8px 0px 8px;
+
+	font-family: 'Rajdhani';
+	font-weight: 600;
+	font-size: 12px;
+	
+	color: #0c0c0c;
+	background-color: #d0d0d0;
 	opacity: 0%;
 	animation: appear 0.2s linear 3.0s forwards;
 }
@@ -281,9 +312,9 @@
 	padding: 0px 16px 0px 16px;
 	margin-top: 4px;
 	font-size: 12px;
-	font-weight: 400;
-	color: black;
-	background-color: white;
+	font-weight: 600;
+	color: #0c0c0c;
+	background-color: #d0d0d0;
 
 	opacity: 0%;
 	animation: appear 0.2s linear 3.0s forwards;
@@ -297,8 +328,9 @@
 
 .text-container {
 	display: inline-block;
-	margin: 0px auto 48px auto;
+	margin: 48px 0px 48px 0px;
 	overflow: hidden;
+	width: 80%;
 
 	border: 2px solid white;
 
@@ -340,18 +372,24 @@
 	font-weight: 500;
 	color: white;
 	opacity: 0%;
+	text-align: left;
 
 	animation: appear 0.2s linear 3.2s forwards;
 }
 
 #skills-section-container {
-	display: inline-grid;
-	width: 80%;
-	margin: auto;
 	text-align: center;
 }
 
+#skills-grid {
+	margin: 8px 0px 0px 16px;
+
+	opacity: 0%;
+	animation: appear 0.2s linear 3.2s forwards;
+}
+
 #skills-title {
+	text-align: left;
 	opacity: 0%;
 	width: 0%;
 	max-width: 150px;
@@ -359,8 +397,9 @@
 }
 
 .skill {
-	max-width: 200px;
-	margin: 4px;
+	display: inline;
+	max-width: 128px;
+	margin: 0px 4px 4px 0px;
 }
 /* about.html */
 
