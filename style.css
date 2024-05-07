@@ -14,8 +14,6 @@
 	/* about.html README section */
 	.text-container { max-width: 70%; }
 	.windowed-text { font-size: 100%; }
-	#profile-image { max-width: 256px; }
-	#profile-image-frame { max-width: 272px; }
 	.grid-container {
 		grid-row: 1;
 		grid-column: 2;
@@ -47,8 +45,6 @@
 		max-width: 80%;
 	}
 	.windowed-text { font-size: 80%; }
-	#profile-image { max-width: 128px; }
-	#profile-image-frame { max-width: 136px; }
 	.grid-container {
 		margin-top: 18px;
 
@@ -219,35 +215,20 @@ body {
 
 .profile-container {
 	display: inline-grid;
+	width: 80%;
 	margin: 0px auto 0px auto;
 	grid-column-gap: 16px;
 	vertical-align: top;
-	max-width: fit-content;
+	text-align: center;
 
 	font-family: "Rajdhani";
 	color: white;
 }
 
-.image-container {
-	display: inline-grid;
-	grid-row: 1;
-	grid-column: 1;
-}
-
 #profile-image {
-	margin: 0px 0px 6% 6%;
+	width: 100%;
 	opacity: 0%;
 	animation: appear 0.1s linear 3.2s forwards;
-}
-
-#profile-image-frame {
-	opacity: 0%;
-	width: 0%;
-	animation: expand_open 0.2s ease-out 2.8s forwards;
-}
-
-#profile-image, #profile-image-frame {
-	grid-row: 1; grid-column: 1;
 }
 
 #edu-title, #contact-title {
@@ -306,8 +287,8 @@ body {
 
 #job-title {
 	width: fit-content;
-	padding: 0px 16px 0px 16px;
-	margin-top: 4px;
+	padding: 2px 16px 2px 16px;
+	margin: 4px auto 0px auto;
 	font-size: 12px;
 	font-weight: 600;
 	color: #0c0c0c;
