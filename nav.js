@@ -49,7 +49,7 @@ class NavigationBar extends HTMLElement {
         font-size: 16px;
       }
 
-      #nav-item-about-text, #nav-item-projects-text {
+      #nav-item-about-text, #nav-item-projects-text, #nav-item-music-text {
         /* Setting the text's position in the grid to the same as the */
         /* the indicator div will allow the elements to be layered.  */
 
@@ -58,14 +58,14 @@ class NavigationBar extends HTMLElement {
         grid-row: 1;
       }
 
-      #nav-item-about-indicator, #nav-item-projects-indicator {
+      #nav-item-about-indicator, #nav-item-projects-indicator, #nav-item-music-indicator {
         /* Layer 1 (Bottom) */
         grid-column: 1;
         grid-row: 1;
         height: 32px; /* Line up the indicator with the large logo */
       }
 
-      #nav-item-about-indicator.current, #nav-item-projects-indicator.current {
+      #nav-item-about-indicator.current, #nav-item-projects-indicator.current, #nav-item-music-indicator.current {
         border-bottom: 1px solid var(--foreground-color);
         animation: glitch 200ms ease-in forwards;
       }
@@ -115,15 +115,7 @@ class NavigationBar extends HTMLElement {
 
     <header>
       <div class="navbar">
-        <!-- Menu item: About -->
-        <a href="about.html" class="nav-item" id="nav-item-about">
-          <div id="nav-item-about-indicator"></div>
-          <div id="nav-item-about-text">ABOUT</div>
-        </a>
-
-        <!-- Spacer -->
-        <div class="spacer"></div>
-
+        <!-- Logo -->
         <a href="index.html" class="logo_container">
           <!-- Small logo for small screens -->
           <img src="Assets/small_logo.svg" class="logo_small" id="logo">
@@ -134,10 +126,28 @@ class NavigationBar extends HTMLElement {
         <!-- Spacer -->
         <div class="spacer"></div>
 
+        <!-- Menu item: About -->
+        <a href="about.html" class="nav-item" id="nav-item-about">
+          <div id="nav-item-about-indicator"></div>
+          <div id="nav-item-about-text">ABOUT</div>
+        </a>
+
+        <!-- Spacer -->
+        <div class="spacer"></div>
+
         <!-- Menu item: Projects -->
         <a href="projects.html" class="nav-item" id="nav-item-projects">
           <div id="nav-item-projects-indicator"></div>
           <div id="nav-item-projects-text">PROJECTS</div>
+        </a>
+
+        <!-- Spacer -->
+        <div class="spacer"></div>
+
+        <!-- Menu item: Music -->
+        <a href="music.html" class="nav-item" id="nav-item-music">
+          <div id="nav-item-music-indicator"></div>
+          <div id="nav-item-music-text">MUSIC</div>
         </a>
       </div>
     </header>
@@ -163,6 +173,14 @@ $(document).ready(function(){
   $('#nav-item-projects-indicator').each(function() {
     if ((window.location.pathname.indexOf($('#nav-item-projects').attr('href'))) > -1) {
         $(this).toggleClass('current');
+    }
+  });
+  // MUSIC
+  $('#nav-item-music-indicator').each(function() {
+    if ((window.location.pathname.indexOf($('#nav-item-music').attr('href'))) > -1) {
+        $(this).toggleClass('current');
+        $('#logo').attr("src", "Assets/small_logo_dark.png")
+        root.style.setProperty("--foreground-color", "#FFFFFF")
     }
   });
 });
