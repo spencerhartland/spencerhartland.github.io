@@ -66,3 +66,16 @@ a {
   width: 100%;
   margin: 24px 0px 24px 0px;
 }
+
+.project-update {
+  width: 100%;
+  background-color: #e6e7e8;
+}
+
+.project-update>.project-page-section {
+  padding: 24px 0px 24px 0px;
+}
+
+.project-update>.img-container {
+  width: 100%;
+}
