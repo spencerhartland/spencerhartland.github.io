@@ -5,11 +5,17 @@ PUBLIC "-//W3C//DTD SVG 1.1//EN"
        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 68.4375 55.0547">
  <style>
+<<<<<<< HEAD
   @media(prefers-color-scheme: light) {
      :root { color: #141414 }
   }
   @media(prefers-color-scheme: dark) {
      :root { color: #f5f5f5 }
+=======
+  :root { color: #141414 }
+  @media(prefers-color-scheme: dark) {
+       :root { color: #f5f5f5 }
+>>>>>>> 85b02dfda37e56bed7ec37fb30c250cb5f966ed1
   }
  </style>
  <g>
