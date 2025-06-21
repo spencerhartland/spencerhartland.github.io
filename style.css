@@ -1,481 +1,54 @@
-/* media queries for responsive design */
-/* Larger Devices */
-@media only screen and (min-width: 600px) {
-	/* index.html artwork */
-	.landing_container img {
-		max-height: 95vh;
-	}
-	/* index.html artwork */
-
-	/* about.html page header */
-	#popup-bottom h1 { font-size: 18px; }
-	/* about.html page header */
-
-	/* about.html README section */
-	.text-container { max-width: 70%; }
-	.windowed-text { font-size: 100%; }
-	.grid-container {
-		grid-row: 1;
-		grid-column: 2;
-	}
-	.image-container h1 { font-size: 22px; }
-	.image-container h2 {
-		font-size: 12px;
-		margin-bottom: 1px;
-	}
-	/* about.html README section */
-}
-
-/* Samller devices */
-@media only screen and (max-width: 600px) {
-	/* index.html artwork */
-	.landing_container img {
-		max-height: 90vh;
-	}
-	/* index.html artwork */
-
-	/* about.html page header */
-	#popup-bottom h1 { font-size: 14px; }
-	/* about.html page header */
-
-	/* about.html README section */
-	.text-container {
-		grid-column: 1;
-		grid-row: 2;
-		max-width: 80%;
-	}
-	.windowed-text { font-size: 80%; }
-	.grid-container {
-		margin-top: 18px;
-
-		grid-row: 2;
-		grid-column: 1;
-	}
-	.image-container h1 { font-size: 16px; }
-	.image-container h2 {
-		font-size: 10px;
-		margin-bottom: 2px;
-	}
-	/* about.html README section */
-}
-/* media queries for responsive design */
-
-/* Animations */
-/* Animate opacity and width from 0-100% to simulate the look of windows opening
- on a computer. */
-@keyframes expand_open {
-	0% { width: 0%; }
-	70% { opacity: 90%; }
-	100% { opacity: 100%; width: 100%; }
-}
-
-/* Animate opacity from 0-100% */
-@keyframes appear {
-	0% { opacity: 0%; }
-	100% { opacity: 100%; }
-}
-
-/* Animate width 0-100%, to be applied to a container of text with the
-'overflow' property set to 'hidden.' */
-@keyframes typing {
-	/* Opacity set to 100% immediately because the text's default should be 0% so
-	as to remain hidden until the animation occurs. */
-  from { opacity: 100%; width: 0; }
-  to { opacity: 100%; width: 100%; }
-}
-/* Animations */
-
 body {
-	text-align: center;
+    color: #f5f5f5;
+    font-family: "Inter";
+    text-align: start;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    min-height: 100vh;
+    max-width: fit-content;
+    margin: auto;
 }
 
-/* about.html */
-.terminal-container {
-	width: 80%;
-	margin: 0px auto 48px auto;
-	padding: 2px;
-	overflow: hidden;
-	text-align: left; 
+h1 {
+    font-weight: 700;
+    font-size: xx-large;
+    margin-bottom: 4px;
 }
 
-.title-bar {
-	width: 0%;
-	max-width: fit-content;
-	margin: 8px 0px 0px 8px;
-	padding: 1px 8px 0px 8px;
-
-	font-family: "Rajdhani";
-	font-weight: 500;
-	font-size: 10px;
-
-	white-space: nowrap; 
-
-	animation: expand_open 1.2s ease-in-out 0s forwards;
+h2 {
+    font-weight: 400;
+    font-size: large;
+    margin-top: 4px;
 }
 
-.title-bar#about { background-color: white; color: black; }
-.title-bar#projects { background-color: black; color: white; }
-
-.typing-text {
-	display: inline-block;
-	width: auto;
-	padding: 8px 0px 4px 8px;
+h3 {
+    font-weight: 400;
+    font-size: medium;
+    margin-top: 32px;
+    margin-bottom: 16px;
 }
 
-.typing-text h1 {
-	opacity: 0%;
-
-	font-family: "Rajdhani";
-	font-weight: 400;
-	font-size: 6px;
-
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  white-space: nowrap; /* Keeps the content on a single line */
-  letter-spacing: 1px; /* Adjust as needed */
+ul {
+    list-style-type: none;
+    color: #d1d1d1;
+    font-weight: 300;
+    font-size: small;
+    margin: 0px 0px 0px 44px;
+    padding: 0px 0px 0px 0px; 
 }
 
-.typing-text#about { color: white; }
-.typing-text#projects { color: black; }
-
-#line_1 { animation: typing 0.4s steps(20, end) 0s forwards; }
-#line_2 { animation: typing 0.4s steps(20, end) 0.4s forwards; }
-#line_3 { animation: typing 0.4s steps(20, end) 0.8s forwards; }
-#line_4 { animation: typing 0.4s steps(20, end) 1.2s forwards; }
-#line_5 { animation: typing 0.4s steps(20, end) 1.6s forwards; }
-#line_6 { animation: typing 0.4s steps(20, end) 2.0s forwards; }
-#line_7 { animation: typing 0.4s steps(20, end) 2.4s forwards; }
-#line_8 { animation: typing 0.4s steps(20, end) 2.8s forwards; }
-#line_9 { animation: typing 0.4s steps(20, end) 3.2s forwards; }
-
-.popup {
-	margin-top: 28px;
-	border: 1px solid white;
-	height: 48px;
-	max-width: 98%;
-	opacity: 0%;
-	animation: expand_open 0.8s ease-out 0.8s forwards;
+li {
+    margin-bottom: 12px;
 }
 
-#popup-top {
-	border-bottom: 1px solid white;
-	height: 2px;
-	padding: 2px;
+#folder {
+    color: #f5f5f5;
+    display: inline;
+    width: 18px;
 }
 
-#progress-bar {
-	background-color: white;
-	height: 100%;
-	width: 0%;
-	animation: expand_open 1.2s ease-out 1.6s forwards;
+a {
+    color: #d1d1d1;
+    text-decoration: none;
 }
-
-#popup-bottom {
-	position: relative;
-	display: grid;
-	/* Align text on x axis */
-	text-align: center;
-}
-
-#popup-bottom h1 {
-	grid-column: 1;
-	grid-row: 1;
-	/* Align text on y axis */
-	line-height: 42px;
-
-	font-family: "Rajdhani";
-	font-weight: 500;
-	color: white;
-
-	opacity: 0%;
-	animation: appear 0.2s linear 2.8s forwards;
-}
-
-#popup-bottom p {
-	position: absolute;
-	grid-column: 1;
-	grid-row: 1;
-	bottom: 0;
-	left: 0;
-	margin: 3px;
-
-	font-family: "Rajdhani";
-	font-weight: 400;
-	font-size: 5px;
-	color: white;
-
-	opacity: 0%;
-	animation: appear 0.2s linear 1.4s forwards;
-}
-
-.section { 
-	text-align: center;
-	width: 100%;
-	margin: 32px auto 0px auto;
-}
-
-.profile-container {
-	display: inline-grid;
-	width: 80%;
-	margin: 0px auto 0px auto;
-	grid-column-gap: 16px;
-	vertical-align: top;
-	text-align: center;
-
-	font-family: "Rajdhani";
-	color: white;
-}
-
-#profile-image {
-	width: 100%;
-	opacity: 0%;
-	animation: appear 0.1s linear 3.2s forwards;
-}
-
-#edu-title, #contact-title {
-	text-align: center;
-	opacity: 0%;
-	max-width: 150px;
-	animation: appear 0.2s linear 3.0s forwards;
-}
-
-#edu-info {
-	width: 65%;
-	margin-top: 4px;
-
-	opacity: 0%;
-	animation: appear 0.2s linear 3.0s forwards;
-}
-
-#contact-info {
-	width: fit-content;
-	padding: 0px 8px 0px 8px;
-	margin: 4px auto 0px auto;
-
-	font-family: 'Rajdhani';
-	font-weight: 600;
-	font-size: 12px;
-	
-	color: #0c0c0c;
-	background-color: #d0d0d0;
-	opacity: 0%;
-	animation: appear 0.2s linear 3.0s forwards;
-}
-
-.info-container {
-	opacity: 0%;
-	width: 0%;
-	margin: 0px auto 0px auto;
-	height: fit-content;
-	max-width: 180px;
-	animation: expand_open 0.2s ease-out 2.8s forwards;
-}
-
-.info-container h2 {
-	font-weight: 700;
-	font-size: 20px;
-}
-
-.info-container h3 {
-	font-weight: 500;
-	font-size: 12px;
-}
-
-.info-container p {
-	font-weight: 400;
-	font-size: 12px;
-}
-
-#job-title {
-	width: fit-content;
-	padding: 2px 16px 2px 16px;
-	margin: 4px auto 0px auto;
-	font-size: 12px;
-	font-weight: 600;
-	color: #0c0c0c;
-	background-color: #d0d0d0;
-
-	opacity: 0%;
-	animation: appear 0.2s linear 3.0s forwards;
-}
-
-.icon-text p {
-	display: inline-block;
-	font-weight: 500;
-	font-size: 12px;
-}
-
-.text-container {
-	display: inline-block;
-	margin: 48px 0px 48px 0px;
-	overflow: hidden;
-	width: 80%;
-
-	border: 2px solid white;
-
-	opacity: 0%;
-	width: 0%;
-	animation: expand_open 0.8s ease-out 3.0s forwards;
-}
-
-.text-container #title-bar {
-	width: 100%;
-	padding-left: 8px;
-	background-color: white;
-}
-
-.file-icon {
-	display: inline-block;
-	vertical-align: middle;
-	height: 14px;
-	margin: 0px 2px 3px 0px;
-}
-
-.text-container h1 {
-	display: inline-block;
-	margin-top: 2px;
-
-	font-family: "Rajdhani";
-	font-weight: 500;
-	font-size: 14px;
-
-	color: black;
-}
-
-.windowed-text {
-	overflow: hidden;
-
-	margin: 4%;
-
-	font-family: "Rajdhani";
-	font-weight: 500;
-	color: white;
-	opacity: 0%;
-	text-align: left;
-
-	animation: appear 0.2s linear 3.2s forwards;
-}
-
-#skills-container {
-	text-align: center;
-}
-
-#skills-title {
-	opacity: 0%;
-	width: 0%;
-	max-width: 150px;
-	animation: expand_open 1.2s ease-in-out 3.2s forwards;
-}
-
-#skills-subtitle {
-	opacity: 0%;
-
-	font-family: "Rajdhani";
-	font-weight: 600;
-	font-size: 16px;
-	color: #d0d0d0;
-
-	animation: appear 0.2s linear 3.2s forwards;
-}
-
-#skills-grid {
-	margin: 4px 0px 0px 16px;
-
-	opacity: 0%;
-	animation: appear 0.2s linear 3.2s forwards;
-}
-
-.skill {
-	max-width: 128px;
-	margin: 0px 4px 4px 0px;
-}
-/* about.html */
-
-/* projects.html */
-#hide {
-	display: none;
-}
-
-.title-bar#projects { max-width: 35%; }
-.typing-text#projects { opacity: 40%; }
-
-#projects-container {
-	display: inline-grid;
-	width: 100%
-}
-
-.terminal-container#projects { grid-row: 1; grid-column: 1; }
-.section#projects { grid-row: 1; grid-column: 1; }
-
-.projects-container {
-	width: 70%;
-	margin: 48px auto 24px auto;
-	font-family: "Rajdhani";
-}
-
-.projects-container h1 {
-	font-weight: 500;
-	font-size: 18px;
-}
-
-.projects-directory-container {
-	width: 100%;
-	margin-top: 16px;
-}
-
-.project {
-	display: grid;
-	margin-bottom: 16px;
-	width: fit-content;
-}
-
-.project h1 {
-	font-size: 14px;
-	max-width: fit-content;
-}
-
-.folder-icon {
-	width: 128px;
-	margin: 0px 16px 8px 0px;
-}
-
-.details {
-	position: absolute;
-	display: none;
-	width: 256px;
-}
-
-.detail-text {
-	grid-row: 1;
-	grid-column: 1;
-
-	margin: 16px 16px 16px 32px;
-
-	font-family: "Rajdhani";
-	color: white;
-}
-
-.detail-text h1 {
-	font-weight: 500;
-	font-size: 16px;
-}
-
-.detail-text h2 {
-	font-weight: 500;
-	font-size: 8px;
-	opacity: 70%;
-}
-
-.detail-text p {
-	font-weight: 400;
-	font-size: 12px;
-}
-
-.tooltip {
-	grid-row: 1;
-	grid-column: 1;
-}
-/* projects.html */
-
-/* music.html */
-
-/* music.html */
