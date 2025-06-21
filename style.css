@@ -80,6 +80,14 @@ li {
     width: 18px;
 }
 
+@media(prefers-color-scheme: light) {
+    #folder { fill: #141414; }
+}
+
+@media(prefers-color-scheme: dark) {
+    #folder { fill: #f5f5f5; }
+}
+
 a {
     text-decoration: none;
 }
