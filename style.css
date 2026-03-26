@@ -96,6 +96,10 @@ li {
     width: 44px;
 }
 
+#physical-page-container {
+    max-width: 600px;
+}
+
 @media(prefers-color-scheme: light) {
     #folder { fill: #141414; }
 }
